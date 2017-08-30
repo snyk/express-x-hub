@@ -185,4 +185,18 @@ describe('xhub.middleware', function(){
         });
     });
 
+    it('isXHubValid should return true when the request signature is valid with a rutime secret', function(done){
+        var body = '{ "id": "realtime_update" }';
+        var xhubSignature = 'sha1=c1a072c0aca15c6bd2f5bfae288ff8420e74aa5e';
+        var req = createRequest(xhubSignature, null, body);
+        var middle = middleware({
+            algorithm: 'sha1',
+            secret: 'something_totaly_different'
+        });
+        middle(req, null, function(){
+            req.isXHubValid('my_little_secret').should.be.true;
+            done();
+        });
+    });
+
 });
