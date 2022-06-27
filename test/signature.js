@@ -3,7 +3,6 @@
 'use strict';
 
 var Signature = require('../lib/signature');
-var sinon = require('sinon');
 
 describe('xhub.signature', function () {
   it('should default to sha1 algorithm when not specified', function () {
