@@ -98,3 +98,7 @@ Strict demands on the JSON. Defaults to `true`.
 
 Reviver used during `JSON.parse`.
 
+
+## Credit
+
+Originally derived from https://github.com/alexcurtis/express-x-hub.

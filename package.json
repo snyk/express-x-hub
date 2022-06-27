@@ -1,15 +1,14 @@
 {
-  "name": "express-x-hub",
-  "version": "1.0.4",
+  "name": "@snyk/express-x-hub",
   "description": "X-Hub-Signature Express Middleware",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -r ./test/support/env -R spec ./test",
-    "test-travis": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -r ./test/support/env -R spec ./test"
+    "lint": "true",
+    "test": "mocha -r ./test/support/env -R spec ./test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexcurtis/express-x-hub.git"
+    "url": "https://github.com/snyk/express-x-hub.git"
   },
   "keywords": [
     "express",
@@ -24,14 +23,8 @@
     "github",
     "webhook"
   ],
-  "author": {
-    "name": "Alex Curtis"
-  },
+  "author": "snyk.io",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alexcurtis/express-x-hub/issues"
-  },
-  "homepage": "https://github.com/alexcurtis/express-x-hub",
   "devDependencies": {
     "chai": "^3.3.0",
     "express": "^4.13.3",
@@ -46,5 +39,10 @@
   "dependencies": {
     "raw-body": "^2.1.4",
     "type-is": "^1.6.9"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
