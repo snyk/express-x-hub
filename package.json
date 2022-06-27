@@ -3,6 +3,7 @@
   "description": "X-Hub-Signature Express Middleware",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write 'index.?s' '{lib,example,test}/**/*.?s'",
     "lint": "true",
     "test": "mocha -r ./test/support/env -R spec ./test"
   },
@@ -29,6 +30,7 @@
     "chai": "^3.3.0",
     "express": "^4.13.3",
     "mocha": "^2.3.3",
+    "prettier": "~2.7.1",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0"
   },

@@ -9,15 +9,19 @@ var app = express();
 app.use(xhub({ secret: 'my_little_secret' }));
 
 // Xhub Handler -- Could Be Any Route.
-app.post('/xhub', function(req, res){
-    if(req.isXHub && req.isXHubValid()){
-        return res.json({ success: 'X-Hub Is Valid' });
-    }
-    return res.status(400).json({ error: 'X-Hub Is Invalid' });
+app.post('/xhub', function (req, res) {
+  if (req.isXHub && req.isXHubValid()) {
+    return res.json({ success: 'X-Hub Is Valid' });
+  }
+  return res.status(400).json({ error: 'X-Hub Is Invalid' });
 });
 
-var server = app.listen(3000, function() {
+var server = app.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;
-  console.log('Example Express-X-Hub app listening at http://%s:%s', host, port);
+  console.log(
+    'Example Express-X-Hub app listening at http://%s:%s',
+    host,
+    port,
+  );
 });
