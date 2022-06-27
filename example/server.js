@@ -1,9 +1,9 @@
 'use strict';
 
-var express = require('express');
-var xhub = require('../lib/middleware');
+const express = require('express');
+const xhub = require('../lib/middleware');
 
-var app = express();
+const app = express();
 
 // XHub Middleware Install
 app.use(xhub({ secret: 'my_little_secret' }));
@@ -16,9 +16,9 @@ app.post('/xhub', function (req, res) {
   return res.status(400).json({ error: 'X-Hub Is Invalid' });
 });
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen(3000, function () {
+  const host = server.address().address;
+  const port = server.address().port;
   console.log(
     'Example Express-X-Hub app listening at http://%s:%s',
     host,
