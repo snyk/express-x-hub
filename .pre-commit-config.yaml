@@ -5,6 +5,6 @@ repos:
     rev: v3.2.0
     hooks:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.1
+    rev: v18.17.0
     hooks:
       - id: gitleaks
