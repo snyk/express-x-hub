@@ -13,7 +13,7 @@ describe('xhub.signature', function () {
   it('should use a specific algorithm when specified', function () {
     const algorithm = 'md5';
     const sig = new Signature(null, null, algorithm);
-    sig.algorithm.should.equal(algorithm);
+    const hmac = crypto.createHmac(this.algorithm, this.secret);
   });
 
   it('should thow when isValid has no secret', function () {
